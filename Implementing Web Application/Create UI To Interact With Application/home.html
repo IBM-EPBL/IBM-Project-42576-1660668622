@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    span::before {
+            content: "Android Developers";
+            animation: animate infinite 5s;
+            padding-left: 10px;
+        }
+      
+        @keyframes animate {
+      
+            0% {
+                content: "Android Developers";
+                color:rgba(48, 182, 0, 0.684);
+            }
+      
+            50% {
+                content: "NodeJs Developers";
+                color:rgb(135, 197, 255);
+            }
+      
+            75% {
+                content: "Python Developers";
+                color:rgb(0, 224, 60);
+            }
+            80% {
+                content: "Java Developers";
+                color:rgb(226, 158, 175);
+            }
+        }
+    
+  
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: bodoni mt;
+      padding: 10px;
+      background-image: url('Images/bg.webp');
+    background-color: black;
+    }
+    
+    /* Header/Blog Title */
+    .header {
+      padding: 30px;
+      text-align: center;
+      background:linear-gradient(to left,rgb(152, 152, 174),rgb(208, 121, 121),rgb(157, 157, 183),rgb(170, 148, 170),rgb(159, 98, 224)),rgb(255, 255, 255),rgb(85, 168, 113);
+
+    }
+    
+    .header h1 {
+      font-size: 50px;
+    }
+    
+    /* Style the top navigation bar */
+    .topnav1 {
+      overflow: hidden;
+      background-color: rgb(0, 0, 0);
+    }
+    
+    /* Style the topnav1 links */
+    .topnav1 a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 16px 14px;
+      text-decoration: none;
+    }
+    .topnav1 h4 {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      margin-top:22px;
+      text-decoration: none;
+    }
+    /* Change color on hover */
+    .topnav1 a:hover {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 9, 187);
+    }
+    
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcol {   
+      float: left;
+      width: 75%;
+    }
+    
+    /* Right column */
+    .rightcol {
+      float: left;
+      width: 25%;
+      background-color: #f1f1f1;
+      padding-left: 20px;
+    }
+    
+    /* Fake image */
+    .fakeimage {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+    
+    /* Add a card effect for articles */
+    .card {
+      background-image: url('Images/bg1.webp');
+      color:white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .card1 {
+      background-image: url('Images/bg1.webp');
+      padding: 20px;
+      color:white;
+      margin-top: 20px;
+      align-self: center;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+      margin-top: 20px;
+    }
+    
+    .search{
+      position: relative;
+      box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+        
+      }
+
+      .search input{
+
+       height: 60px;
+       text-indent: 25px;
+       border: 2px solid #d6d4d4;
+
+
+      }
+
+
+      .search input:focus{
+
+       box-shadow: none;
+       border: 2px solid blue;
+
+
+      }
+
+      .search .fa-search{
+
+       position: absolute;
+       top: 20px;
+       left: 16px;
+
+      }
+
+      
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      .leftcol, .rightcol {   
+        width: 100%;
+        padding: 0;
+      }
+    }
+    
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .topnav1 a {
+        float: none;
+        width: 100%;
+      }
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="header">
+      <h1 style="color:white;">Skill And Job Recommender</h1>
+      <h1 style="color:white;">Inspiring <span > </span>Jobs for the future !</h1>
+    </div>
+    
+    <div class="topnav1">
+      <a href="home.html"><i class="fa fa-home" style="font-size:24px"></i><pre>Home</pre></a>
+      <a href="login.html"><i class="fa fa-sign-in" style="font-size:24px"></i><pre>Login</pre></a>
+      <a href="register.html"><i class="fa fa-registered" style="font-size:24px"></i><pre>Register</pre></a>
+      <a href="home.html"><i class="fa fa-eye" style="font-size:24px"></i><pre>About Us</pre></a>
+      <a href="job.html"><i class="fa fa-graduation-cap" style="font-size:24px"></i><pre>Job Chooser</pre></a>
+      <h4></i><pre><input type="text" placeholder="Search.."><button style="font-size:14px;color:rgb(43, 0, 160);background-color:rgb(255, 255, 255)"><i class="fa fa-search"></i></a></pre></h4>
+      
+      
+      <a href="#" style="float:right"><i class="fa fa-sign-out" style="font-size:24px"></i><pre>Sign Out</pre></a>
+    </div>
+    
+    <div class="row">
+      <div class="leftcol">
+        <div class="card">
+          <h2 style="font-family:Bodoni Mt;">Our Objective</h2>
+          <h3 style="font-family:Bodoni Mt;">For Skillers And Job Seekers</h3>
+         <img src="Images/obj1.jpg" width="100%" height="80%">
+          <p style="font-family:Bodoni Mt;"><b>Well directed career guidance programs for educational institutions
+            Appropriate certification courses that suit the industry need
+            Train the trainers; expanded awareness about the current industry standards
+            Liaise with corporates to offer niche internships
+            Establish technology development centers in colleges
+            Specialised incubation centers in collaboration with corporates</b></p>
+        </div>
+        <div class="card">
+          <h2>Mission</h2>
+          <h5>Guarentee In Finding Efficient Professionals</h5>
+          <img src="Images/mission.jpg" width="100%" height="70%">
+          <p style="font-family:Bodoni Mt;"><b>MARTBRIDGE is an edTech organization with a vision to bridge the gap between academia & industry. Our outcome-based experiential learning programs on emerging technologies (Internet of Things, Machine Learning, Data Science, Artificial Intelligence, Robotics) are building skilled entry - level engineers, for the corporate world. .
+          </b></p>
+        </div>
+        <div class="card1">
+          <h2>Vision</h2>
+          <h5>Striving Towards Successful Career</h5>
+          <img src="Images/vission.jpg" width="100%" height="70%">
+          <p style="font-family:Bodoni Mt;">
+            <b>The Internet-based recruiting platforms become a primary recruitment channel in most companies. While such platforms decrease the recruitment time and advertisement cost, they suffer from an inappropriateness of traditional information retrieval techniques like the Boolean search methods. Consequently, a vast amount of candidates missed the opportunity of recruiting. The recommender system technology aims to help users in finding items that match their personnel interests; it has a successful usage in e-commerce applications to deal with problems related to information overload efficiently. In order to improve the e-recruiting functionality, many recommender system approaches have been proposed. This article will present a survey of e-recruiting process and existing recommendation approaches for building personalized recommender systems for candidates/job matching.          </b></p>
+        </div>
+        <div>
+          <div class="card">
+            <h2>Future Depends On What You Do Today........</h2>  
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+              </ol>
+          
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="Images/c1.jpg" alt="Los Angeles" style="width:100%;">
+                </div>
+          
+                <div class="item">
+                  <img src="c2.jpg" alt="Chicago" style="width:100%;">
+                </div>
+              
+                <div class="item">
+                  <img src="Images/c3.jpg" alt="New york" style="width:100%;">
+                </div>
+
+                <div class="item">
+                  <img src="Images/c4.webp" alt="New york" style="width:100%;">
+                </div>
+              
+          
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <h3 class="glyphicon glyphicon-chevron-left"></h3>
+                <h3 class="sr-only">Previous</h3>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <h3 class="glyphicon glyphicon-chevron-right"></h3>
+                <h3 class="sr-only">Next</h3>
+              </a>
+            </div>
+          </div></div>
+        </div>
+        <div class="card1">
+          <h2 style="font-family:bodoni mt;">Contact Us</h2>
+          <img src="Images/contact.jpg" width="130">
+          <p style="font-family:Bodoni Mt;">
+            <pre><b style="font-family: bodoni mt;"><i class="fa fa-envelope" style="font-size:24px;color:rgb(30, 169, 204)"></i> Email - <i style="color:rgb(58, 58, 210);"><u>abcd@gmail.com</u></i></b></pre>
+            <pre><b style="font-family: bodoni mt;"><i class="fa fa-linkedin-square" style="font-size:24px;color:rgb(30, 169, 204)"></i> LinkedIn - <i style="color:rgb(58, 58, 210);"><u>https://www.linkedin.com/login</u></i></b></pre>
+            <pre><b style="font-family: bodoni mt;"><i class="fa fa-github" style="font-size:24px;color:rgb(30, 169, 204)"></i> GitHub - <i style="color:rgb(58, 58, 210);"><u>https://www.linkedin.com/login</u></i></b></pre>
+
+          </p>
+        </div>
+      </div>
+      <div class="rightcol">
+        <div class="card">
+          <h2>Know About Us</h2>
+          <img src="Images/skill.jpg" width="100%" height="70%">
+          <p><b>A job matching model is designed to match jobs to relevant individuals, removing the tiresome need for a manual search. The job recommender should evaluate a person's suitability for jobs and come up with surgical results with a list of users based on their target skillset and other pre-defined parameters.We are experts in finding such minds.....</b></p>
+        </div>
+        <div class="card">
+          <h3>Trending today...</h3>
+          <div class="fakeimage"><img src="Images/img1.jpg">
+          <pre><b>Infosys hired 100+ skillers across 
+India</b></pre></div>
+<div class="fakeimage"><img src="Images/img2.jpg" width="97%">
+  <pre><b>Demand for web developers is on hike</b></pre></div>
+          <div class="fakeimage"><img src="Images/img3.png" width="100%" height="70%"><pre><b>Angular Beats React?...</b></pre></div>
+          <div class="fakeimage"><img src="Images/img4.jpg" width="100%" height="70%"><pre><b>Highest Paid Job - Management 
+Consulting</b></pre></div>
+<div class="fakeimage"><img src="Images/img5.png" width="100%" height="70%"><pre><b>Full Stack Web Development - 
+Organizer Of The World</b></pre></div>
+<div class="fakeimage"><img src="Images/img6.jpg" width="100%" height="70%"><pre><b>Jobs In Japan - TITP
+Where Skill==Job
+</b></pre></div>
+<div class="fakeimage"><img src="Images/img7.png" width="100%" height="70%"><pre><b>Top Companies Are Hiring Now...UI/UX 
+designers create and iterate end to 
+end user experiences.
+Use the following job description 
+template when hiring your next UI/
+UX Designer and customize it further 
+based on your specific requirements.</b></pre></div>
+<div class="fakeimage"><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.learnacademy.org%2Fblog%2Fwhat-5-skills-need-coding-improve%2F&psig=AOvVaw2Vb7xWFRd3gur9_OyefLs8&ust=1667906830052000&source=images&cd=vfe&ved=2ahUKEwjOlaGi-5v7AhUVkdgFHQHwCVAQr4kDegUIARCCAg"><img src="Images/img8.jpg" width="100%" height="70%"></a><pre><b>Become A Coder Genius...
+The two primary skills of coders - 
+expression and problem-solving.
+Above all, you need to be able to 
+come up with creative solutions 
+to abstract problems.</b></pre></div>
+
+<div class="fakeimage"><a href="https://www.enggwave.com/wipro-wilp-2022-off-campus-applications-invited-from-freshers-pan-india/85439"><img src="Images/img9.jpg" width="100%" height="70%"></a><pre><b>Wipro WILP 2022 -Applications 
+Invited From Freshers...</b></pre></div>
+
+<div class="fakeimage"><a href="https://www.zdnet.com/article/ai-is-running-out-of-computing-power-ibm-says-the-answer-is-this-new-chip/"><img src="Images/img10.jpg" width="100%" height="70%"></a><pre><b>AI is running out of computing 
+power. IBM says the answer is this 
+new chip</b></pre></div>
+<div class="fakeimage"><a href="https://www.analyticsinsight.net/google-wants-robots-to-start-coding-launches-code-as-policies-to-train-them/"><img src="Images/img11.jpg" width="100%" height="70%"></a><pre><b>Google Wants Robots to Start Coding,
+Launches ‘Code as Policies’ to Train 
+Them</b></pre></div>
+      </div>
+    </div>
+   
+    </body>
+    </html>
+    
+    
+    
